@@ -122,4 +122,3 @@ if st.button("送信"):
         st.write(result["answer"])
     else:
         st.error(result)
-```
