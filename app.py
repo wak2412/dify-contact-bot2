@@ -5,7 +5,7 @@ import requests
 # Dify設定
 # =========================
 
-API_KEY = "ここにDifyのAPIキー"
+API_KEY = "app-5nIMDwep1eheYJWDYh9W6itN"
 
 URL = "https://api.dify.ai/v1/chat-messages"
 
@@ -36,9 +36,9 @@ query = ""
 
 if mode == "メール作成モード":
 
-    inquiry = st.text_area("お問い合わせ内容")
+    inquiry = st.text_area("問い合わせ(必須入力）")
 
-    history = st.text_area("過去のやり取り（任意）")
+    history = st.text_area("過去のやり取り（任意入力）")
 
     query = f"""
     【モード】
@@ -57,9 +57,9 @@ if mode == "メール作成モード":
 
 elif mode == "メール添削モード":
 
-    mail = st.text_area("添削対象メール")
+    mail = st.text_area("添削対象メール（必須入力）")
 
-    direction = st.text_input("添削の方向性")
+    direction = st.text_input("添削の方向性（任意入力）")
 
     query = f"""
     【モード】
@@ -78,7 +78,7 @@ elif mode == "メール添削モード":
 
 elif mode == "質問回答モード":
 
-    question = st.text_area("質問したい内容")
+    question = st.text_area("質問（必須入力）")
 
     query = f"""
     【モード】
